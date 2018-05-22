@@ -135,9 +135,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="controller\ControllerEstagios.cpp" />
+    <ClCompile Include="dao\AlunoDAO.cpp" />
+    <ClCompile Include="dao\EstagioDAO.cpp" />
+    <ClCompile Include="dao\FuncionalidadeDAO.cpp" />
+    <ClCompile Include="dao\GerenciadorDePerfisDeUsuario.cpp" />
+    <ClCompile Include="dao\MySQLDAO.cpp" />
+    <ClCompile Include="dao\PerfilDAO.cpp" />
+    <ClCompile Include="dao\UsuarioDAO.cpp" />
+    <ClCompile Include="dominio\dto\Aluno.cpp" />
+    <ClCompile Include="dominio\dto\Estagio.cpp" />
+    <ClCompile Include="dominio\seguranca\ControllerSeguranca.cpp" />
+    <ClCompile Include="dominio\seguranca\Funcionalidade.cpp" />
+    <ClCompile Include="dominio\seguranca\Perfil.cpp" />
+    <ClCompile Include="dominio\seguranca\Usuario.cpp" />
+    <ClCompile Include="dominio\ServicoEstagios.cpp" />
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="controller\ControllerEstagios.h" />
+    <ClInclude Include="dao\AlunoDAO.h" />
+    <ClInclude Include="dao\EstagioDAO.h" />
+    <ClInclude Include="dao\FuncionalidadeDAO.h" />
+    <ClInclude Include="dao\GerenciadorDePerfisDeUsuario.h" />
+    <ClInclude Include="dao\MySQLDAO.h" />
+    <ClInclude Include="dao\PerfilDAO.h" />
+    <ClInclude Include="dao\UsuarioDAO.h" />
+    <ClInclude Include="dominio\dto\Aluno.h" />
+    <ClInclude Include="dominio\dto\Estagio.h" />
+    <ClInclude Include="dominio\seguranca\ControllerSeguranca.h" />
+    <ClInclude Include="dominio\seguranca\Funcionalidade.h" />
+    <ClInclude Include="dominio\seguranca\Perfil.h" />
+    <ClInclude Include="dominio\seguranca\Usuario.h" />
+    <ClInclude Include="dominio\ServicoEstagios.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

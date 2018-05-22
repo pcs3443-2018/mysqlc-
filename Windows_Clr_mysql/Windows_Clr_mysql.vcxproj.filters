@@ -18,9 +18,99 @@
     <ClCompile Include="MyForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="controller\ControllerEstagios.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dao\AlunoDAO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dao\EstagioDAO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dao\FuncionalidadeDAO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dao\GerenciadorDePerfisDeUsuario.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dao\MySQLDAO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dao\PerfilDAO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dao\UsuarioDAO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dominio\dto\Aluno.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dominio\dto\Estagio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dominio\seguranca\ControllerSeguranca.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dominio\seguranca\Funcionalidade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dominio\seguranca\Perfil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dominio\seguranca\Usuario.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dominio\ServicoEstagios.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controller\ControllerEstagios.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dao\AlunoDAO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dao\EstagioDAO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dao\FuncionalidadeDAO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dao\GerenciadorDePerfisDeUsuario.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dao\MySQLDAO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dao\PerfilDAO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dao\UsuarioDAO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dominio\dto\Aluno.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dominio\dto\Estagio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dominio\seguranca\ControllerSeguranca.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dominio\seguranca\Funcionalidade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dominio\seguranca\Perfil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dominio\seguranca\Usuario.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dominio\ServicoEstagios.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

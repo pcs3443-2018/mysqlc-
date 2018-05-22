@@ -1,5 +1,5 @@
 #pragma once
-
+#include "dominio/dto/Aluno.h"
 namespace WindowsClrmysql {
 
 	using namespace System;
@@ -52,7 +52,7 @@ namespace WindowsClrmysql {
 			this->Size = System::Drawing::Size(300,300);
 			this->Text = L"MyForm";
 			this->Padding = System::Windows::Forms::Padding(0);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;			
 		}
 #pragma endregion
 	};
