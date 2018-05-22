@@ -5,6 +5,16 @@
 
 
 
+vector<Funcionalidade*>* Perfil::getFuncionalidaes()
+{
+	return this->funcionalidades;
+}
+
+void Perfil::setFuncionalidades(vector<Funcionalidade*>* funcionalidades)
+{
+	this->funcionalidades = funcionalidades;
+}
+
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
 Perfil::Perfil() 
 {

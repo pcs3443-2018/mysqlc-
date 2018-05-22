@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{eb75bfbd-dfb3-47fc-b6c4-a1409edf7f6b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp">
@@ -63,6 +66,9 @@
     <ClCompile Include="dominio\ServicoEstagios.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LoginUI.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -112,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="dominio\ServicoEstagios.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginUI.h">
+      <Filter>ui</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

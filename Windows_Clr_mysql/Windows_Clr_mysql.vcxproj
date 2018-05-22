@@ -150,6 +150,7 @@
     <ClCompile Include="dominio\seguranca\Perfil.cpp" />
     <ClCompile Include="dominio\seguranca\Usuario.cpp" />
     <ClCompile Include="dominio\ServicoEstagios.cpp" />
+    <ClCompile Include="LoginUI.cpp" />
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -168,9 +169,17 @@
     <ClInclude Include="dominio\seguranca\Perfil.h" />
     <ClInclude Include="dominio\seguranca\Usuario.h" />
     <ClInclude Include="dominio\ServicoEstagios.h" />
+    <ClInclude Include="LoginUI.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LoginUI.resx">
+      <DependentUpon>LoginUI.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

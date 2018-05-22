@@ -25,7 +25,7 @@ class Aluno
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        vector<Estagio> *estagios;
+        vector<Estagio*> *estagios;
 
 
 
@@ -88,9 +88,9 @@ class Aluno
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        vector<Estagio>* getEstagios(); 
+        vector<Estagio*>* getEstagios(); 
 
-		void setEstagios(vector<Estagio>* estagios);
+		void setEstagios(vector<Estagio*>* estagios);
 
 
 

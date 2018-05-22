@@ -52,11 +52,13 @@ void Aluno::setNome(string nome)
     return;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-vector<Estagio>*  Aluno::getEstagios() 
+vector<Estagio*>*  Aluno::getEstagios() 
 {
     //TODO Auto-generated method stub
-	return new vector<Estagio>();
+	return new vector<Estagio*>();
 }
-void setEstagios(vector<Estagio>* estagios) {
-	return;
+void Aluno::setEstagios(vector<Estagio*>* estagios)
+{
+	this->estagios = estagios;
 }
+

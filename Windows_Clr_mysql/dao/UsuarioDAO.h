@@ -5,6 +5,7 @@
 //End section for file UsuarioDAO.h
 #include "../dominio/seguranca/Usuario.h"
 #include "PerfilDAO.h" //Dependency Generated Source:UsuarioDAO Target:PerfilDAO
+#include "MySQLDAO.h"
 
 
 

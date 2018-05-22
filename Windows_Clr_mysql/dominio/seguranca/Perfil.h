@@ -8,13 +8,6 @@ using namespace std;
 //TODO: Add definitions that you want preserved
 //End section for file Perfil.h
 
-
-
-
-
-
-
-
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
 class Perfil
 {
@@ -27,7 +20,7 @@ class Perfil
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        vector<Funcionalidade> * funcionalidades;
+        vector<Funcionalidade*> * funcionalidades;
 
 
 
@@ -38,8 +31,8 @@ class Perfil
 
 
     public:
-		vector<Funcionalidade> * getFuncionalidaes;
-		void setFuncionalidades(vector<Funcionalidade>* funcionalidades);
+		vector<Funcionalidade*> * getFuncionalidaes();
+		void setFuncionalidades(vector<Funcionalidade*>* funcionalidades);
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
         Perfil(); 

@@ -18,8 +18,14 @@ ControllerSeguranca::~ControllerSeguranca()
 Usuario* ControllerSeguranca::logar(string login, string senha)
 {
     //TODO Auto-generated method stub
-	Usuario * usuario = new Usuario();
+	//Usuário Mock
+	Usuario * usuario = nullptr;
+	UsuarioDAO* usuarioDao = new UsuarioDAO();
+
+	usuario = usuarioDao->selecionarPeloLoginESenha(login, senha);
+
 	return usuario;
+	//fim usuário mock
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
 Usuario* ControllerSeguranca::deslogar(string login)
