@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file PerfilDAO.h
 #include "../dominio/seguranca/Perfil.h"
+#include "MySQLDAO.h"
 #include "FuncionalidadeDAO.h" //Dependency Generated Source:PerfilDAO Target:FuncionalidadeDAO
 
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"

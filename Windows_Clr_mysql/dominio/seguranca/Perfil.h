@@ -26,6 +26,7 @@ class Perfil
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
         int id;
+		string nome;
 
 
 
@@ -36,7 +37,8 @@ class Perfil
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
         Perfil(); 
-
+		void setNome(string nome);
+		string getNome();
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"

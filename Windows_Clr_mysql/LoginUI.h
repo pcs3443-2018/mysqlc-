@@ -1,7 +1,11 @@
 #pragma once
 #include "dominio/seguranca/ControllerSeguranca.h"
+#include "TelaDoUsuario.h"
 #include "dominio/seguranca/Usuario.h"
 #include <msclr\marshal_cppstd.h>
+#include <ctime>
+#include <iomanip>
+#include <sstream>
 
 namespace WindowsClrmysql {
 
@@ -150,16 +154,53 @@ namespace WindowsClrmysql {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		ControllerSeguranca * seguranca = new ControllerSeguranca();
-		std::string login = msclr::interop::marshal_as<std::string>(this->Login);
-		std::string senha = msclr::interop::marshal_as<std::string>(this->Senha);
-		Usuario* usuario = seguranca->logar(login, senha);
-		if (usuario != nullptr) {
-			MessageBox::Show("Usuário: " + msclr::interop::marshal_as<String^>(usuario->getLogin()) + " logado com sucesso.");
+		//Validação
+		if ((this->Login == String::Empty) && (this->Senha == String::Empty)) {
+			
+			this->txt_login->BackColor = System::Drawing::Color::Yellow;
+			this->txt_senha->BackColor = System::Drawing::Color::Yellow;
+		}
+		else if (this->Login == String::Empty) {
+			this->txt_login->BackColor = System::Drawing::Color::Yellow;
+		}
+		else if (this->Senha == String::Empty) {
+			this->txt_senha->BackColor = System::Drawing::Color::Yellow;
 		}
 		else {
-			MessageBox::Show("Erro na tentativa de login.");
+			ControllerSeguranca * seguranca = new ControllerSeguranca();
+			std::string login = msclr::interop::marshal_as<std::string>(this->Login);
+			std::string senha = msclr::interop::marshal_as<std::string>(this->Senha);
+			
+			Usuario* usuario = seguranca->logar(login, senha);
+			if (usuario != nullptr) {
+
+
+				time_t dt = usuario->getDataCadastro();
+				std::stringstream ss;
+				ss << std::put_time(std::localtime(&dt), "%Y-%m-%d");
+				string d = ss.str();
+				MessageBox::Show("Usuário: " + msclr::interop::marshal_as<String^>(usuario->getLogin()) + 
+					" logado com sucesso, cadastrado em: " + msclr::interop::marshal_as<String^>(d));
+				
+				usuario = seguranca->carregarFuncionalidades(usuario);
+				
+				TelaDoUsuario^ tu = gcnew TelaDoUsuario(usuario);
+				this->Hide();
+				tu->Show();
+
+
+			}
+			else {
+				MessageBox::Show("Usuário ou senha inválidos");
+			}
+
 		}
+
+
+
+
+
+		
 		
 	}
 };

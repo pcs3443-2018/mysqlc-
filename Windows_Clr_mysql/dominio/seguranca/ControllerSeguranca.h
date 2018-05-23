@@ -5,6 +5,7 @@
 //End section for file ControllerSeguranca.h
 #include "Usuario.h"
 #include "../../dao/UsuarioDAO.h" //Dependency Generated Source:ControllerSeguranca Target:UsuarioDAO
+#include "../../dao/PerfilDAO.h"
 
 
 

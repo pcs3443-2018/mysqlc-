@@ -69,6 +69,9 @@
     <ClCompile Include="LoginUI.cpp">
       <Filter>ui</Filter>
     </ClCompile>
+    <ClCompile Include="TelaDoUsuario.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -122,5 +125,13 @@
     <ClInclude Include="LoginUI.h">
       <Filter>ui</Filter>
     </ClInclude>
+    <ClInclude Include="TelaDoUsuario.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LoginUI.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -4,6 +4,7 @@
 //TODO: Add definitions that you want preserved
 //End section for file FuncionalidadeDAO.h
 #include "../dominio/seguranca/Funcionalidade.h"
+#include "MySQLDAO.h"
 
 
 

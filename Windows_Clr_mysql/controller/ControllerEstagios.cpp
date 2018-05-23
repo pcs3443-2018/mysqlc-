@@ -34,7 +34,7 @@ void ControllerEstagios::mostrarTelaDeGeracaoDePDF()
     return;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-void ControllerEstagios::mostrarTelaOpcoes() 
+void ControllerEstagios::mostrarTelaDoUsuario(Usuario* usuario) 
 {
     //TODO Auto-generated method stub
     return;

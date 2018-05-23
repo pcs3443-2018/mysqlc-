@@ -15,7 +15,9 @@ MySQLDAO::MySQLDAO()
 	sql::Statement *stmt;
 	sql::PreparedStatement *pstmt;
 	string log = "";
-	
+	this->url = "tcp://143.107.102.55:3306/teste";
+	this->pass = "teste";
+	this->user = "teste";
 	try
 	{
 		driver = get_driver_instance();

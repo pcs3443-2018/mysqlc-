@@ -20,6 +20,14 @@ Perfil::Perfil()
 {
     //TODO Auto-generated method stub
 }
+void Perfil::setNome(string nome)
+{
+	this->nome = nome;
+}
+string Perfil::getNome()
+{
+	return this->nome;
+}
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
 Perfil::~Perfil() 
 {

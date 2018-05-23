@@ -3,6 +3,7 @@
 //Begin section for file ControllerEstagios.h
 //TODO: Add definitions that you want preserved
 //End section for file ControllerEstagios.h
+#include "../dominio/seguranca/Usuario.h"
 #include "../dominio/ServicoEstagios.h" //Dependency Generated Source:ControllerEstagios Target:ServicoEstagios
 /*
 #include "../view/TelaDeAvaliacaoDoAluno.h" //Dependency Generated Source:ControllerEstagios Target:TelaDeAvaliacaoDoAluno
@@ -77,7 +78,7 @@ class ControllerEstagios
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        void mostrarTelaOpcoes(); 
+        void mostrarTelaDoUsuario(Usuario * u); 
 
 
 

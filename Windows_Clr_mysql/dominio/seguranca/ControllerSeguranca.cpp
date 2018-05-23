@@ -24,6 +24,10 @@ Usuario* ControllerSeguranca::logar(string login, string senha)
 
 	usuario = usuarioDao->selecionarPeloLoginESenha(login, senha);
 
+	if (usuario != nullptr) {
+		usuario = usuarioDao->carregarUsuario(usuario->getId());
+	}
+
 	return usuario;
 	//fim usuário mock
 }
@@ -36,6 +40,21 @@ Usuario* ControllerSeguranca::deslogar(string login)
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
 Usuario* ControllerSeguranca::carregarFuncionalidades(Usuario* usuario) 
 {
-	Usuario * u = new Usuario();
-	return u;
+	
+	PerfilDAO * pd = new PerfilDAO();
+	Perfil* perfil = nullptr;
+	vector<Perfil*>::iterator it;
+	vector<Perfil*>* temp = new vector<Perfil*>();
+	
+	for (it = usuario->getPerfis()->begin(); it != usuario->getPerfis()->end(); it++) {
+		perfil = pd->selecionarPeloNome((*it)->getNome());
+		temp->push_back(perfil);
+	}
+	usuario->setPerfis(temp);
+	
+
+
+
+
+	return usuario;
 }

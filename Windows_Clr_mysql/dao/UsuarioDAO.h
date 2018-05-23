@@ -50,7 +50,7 @@ class UsuarioDAO
 
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-        Usuario* carregarUsuario(Usuario* id); 
+        Usuario* carregarUsuario(int id); 
 
 
 
