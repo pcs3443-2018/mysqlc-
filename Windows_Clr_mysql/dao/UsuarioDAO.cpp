@@ -93,11 +93,10 @@ Usuario* UsuarioDAO::selecionarPeloLoginESenha(string login, string senha)
 	return usuario;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
-Usuario* UsuarioDAO::carregarUsuario(int id) 
+Usuario* UsuarioDAO::carregarUsuario(Usuario * usuario) 
 {
 	string log;
 	Perfil * perfil = nullptr;
-	Usuario * usuario = nullptr;
 	vector<Perfil*>* perfis = nullptr;
 	sql::Connection * connection;
 	sql::Statement* statement;
@@ -109,10 +108,9 @@ Usuario* UsuarioDAO::carregarUsuario(int id)
 		MySQLDAO* mysqldao = MySQLDAO::getInstance();
 		connection = mysqldao->getConnection();
 		preparedStatement = connection->prepareStatement("select nome_perfil from usuario_perfis where id_usuario = ?");
-		preparedStatement->setInt(1, id);
-		usuario = new Usuario();
-		resultSet = preparedStatement->executeQuery();
-		usuario->setId(id);
+		preparedStatement->setInt(1, usuario->getId());
+		//usuario = new Usuario();
+		resultSet = preparedStatement->executeQuery();		
 		perfis = new vector<Perfil*>();
 		while (resultSet->next()) {
 			perfil = new Perfil();

@@ -5,7 +5,7 @@
 
 
 
-vector<Funcionalidade*>* Perfil::getFuncionalidaes()
+vector<Funcionalidade*>* Perfil::getFuncionalidades()
 {
 	return this->funcionalidades;
 }

@@ -25,7 +25,7 @@ Usuario* ControllerSeguranca::logar(string login, string senha)
 	usuario = usuarioDao->selecionarPeloLoginESenha(login, senha);
 
 	if (usuario != nullptr) {
-		usuario = usuarioDao->carregarUsuario(usuario->getId());
+		usuario = usuarioDao->carregarUsuario(usuario);
 	}
 
 	return usuario;
@@ -34,7 +34,7 @@ Usuario* ControllerSeguranca::logar(string login, string senha)
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
 Usuario* ControllerSeguranca::deslogar(string login)
 {
-	Usuario * usuario = new Usuario();
+	Usuario * usuario = nullptr;
 	return usuario;
 }
 //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
@@ -51,10 +51,5 @@ Usuario* ControllerSeguranca::carregarFuncionalidades(Usuario* usuario)
 		temp->push_back(perfil);
 	}
 	usuario->setPerfis(temp);
-	
-
-
-
-
 	return usuario;
 }

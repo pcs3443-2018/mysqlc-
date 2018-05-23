@@ -24,7 +24,65 @@ namespace WindowsClrmysql {
 		}
 		TelaDoUsuario(Usuario* usuario) {
 			InitializeComponent();
-			//if (usuario->getPerfis)
+			vector<Perfil*>::iterator it_p;
+			vector<Funcionalidade*>::iterator it_f;
+			for (it_p = usuario->getPerfis()->begin(); it_p != usuario->getPerfis()->end(); it_p++) {
+				for (it_f = (*it_p)->getFuncionalidades()->begin(); it_f != (*it_p)->getFuncionalidades()->end(); it_f++) {
+					Funcionalidade * f = (*it_f);
+					switch(f->getId()){
+					case 1:
+						this->bt_cadastrar_aluno->Enabled = true;
+						break;
+					case 2:
+						this->bt_cadastrar_usuarios->Enabled = true;
+						break;
+					case 3:
+						this->bt_editar_perfis_do_usuario->Enabled = true;
+						break;
+					case 4:
+						this->bt_importar_alunos_de_arquivo->Enabled = true;
+						break;
+					case 5:
+						this->bt_registrar_estagio->Enabled = true;
+						break;
+					case 6:
+						this->bt_avaliar_estagio->Enabled = true;
+						break;
+					case 7:
+						this->bt_mostrar_pendencias->Enabled = true;
+						break;
+					case 8:
+						this->bt_divulgar_vaga->Enabled = true;
+						break;
+					case 9:
+						this->bt_enviar_avaliacao->Enabled = true;
+						break;
+					case 10:
+						this->bt_solicitar_registro_estagio->Enabled = true;
+						break;
+					case 11:
+						this->bt_preencher_plano->Enabled = true;
+						break;
+					case 12:
+						this->bt_enviar_relatorio->Enabled = true;
+						break;
+					case 13:
+						this->bt_historico_estagio->Enabled = true;
+						break;
+					case 14:
+						this->bt_historico_empresa->Enabled = true;
+						break;
+					default:
+						break;
+
+					}
+				}
+				
+			}
+
+			//verificar funcionalidades do usuario e desativar botões
+
+			
 
 		}
 
@@ -96,6 +154,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_registrar_estagio
 			// 
+			this->bt_registrar_estagio->Enabled = false;
 			this->bt_registrar_estagio->Location = System::Drawing::Point(12, 51);
 			this->bt_registrar_estagio->Name = L"bt_registrar_estagio";
 			this->bt_registrar_estagio->Size = System::Drawing::Size(110, 23);
@@ -105,6 +164,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_avaliar_estagio
 			// 
+			this->bt_avaliar_estagio->Enabled = false;
 			this->bt_avaliar_estagio->Location = System::Drawing::Point(12, 80);
 			this->bt_avaliar_estagio->Name = L"bt_avaliar_estagio";
 			this->bt_avaliar_estagio->Size = System::Drawing::Size(110, 23);
@@ -114,6 +174,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_mostrar_pendencias
 			// 
+			this->bt_mostrar_pendencias->Enabled = false;
 			this->bt_mostrar_pendencias->Location = System::Drawing::Point(12, 109);
 			this->bt_mostrar_pendencias->Name = L"bt_mostrar_pendencias";
 			this->bt_mostrar_pendencias->Size = System::Drawing::Size(178, 23);
@@ -123,6 +184,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_historico_estagio
 			// 
+			this->bt_historico_estagio->Enabled = false;
 			this->bt_historico_estagio->Location = System::Drawing::Point(12, 139);
 			this->bt_historico_estagio->Name = L"bt_historico_estagio";
 			this->bt_historico_estagio->Size = System::Drawing::Size(127, 23);
@@ -132,6 +194,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_historico_empresa
 			// 
+			this->bt_historico_empresa->Enabled = false;
 			this->bt_historico_empresa->Location = System::Drawing::Point(12, 169);
 			this->bt_historico_empresa->Name = L"bt_historico_empresa";
 			this->bt_historico_empresa->Size = System::Drawing::Size(127, 23);
@@ -141,6 +204,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_enviar_avaliacao
 			// 
+			this->bt_enviar_avaliacao->Enabled = false;
 			this->bt_enviar_avaliacao->Location = System::Drawing::Point(207, 139);
 			this->bt_enviar_avaliacao->Name = L"bt_enviar_avaliacao";
 			this->bt_enviar_avaliacao->Size = System::Drawing::Size(146, 23);
@@ -150,6 +214,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_solicitar_registro_estagio
 			// 
+			this->bt_solicitar_registro_estagio->Enabled = false;
 			this->bt_solicitar_registro_estagio->Location = System::Drawing::Point(207, 50);
 			this->bt_solicitar_registro_estagio->Name = L"bt_solicitar_registro_estagio";
 			this->bt_solicitar_registro_estagio->Size = System::Drawing::Size(157, 23);
@@ -159,6 +224,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_preencher_plano
 			// 
+			this->bt_preencher_plano->Enabled = false;
 			this->bt_preencher_plano->Location = System::Drawing::Point(207, 79);
 			this->bt_preencher_plano->Name = L"bt_preencher_plano";
 			this->bt_preencher_plano->Size = System::Drawing::Size(157, 23);
@@ -168,6 +234,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_enviar_relatorio
 			// 
+			this->bt_enviar_relatorio->Enabled = false;
 			this->bt_enviar_relatorio->Location = System::Drawing::Point(207, 108);
 			this->bt_enviar_relatorio->Name = L"bt_enviar_relatorio";
 			this->bt_enviar_relatorio->Size = System::Drawing::Size(157, 23);
@@ -177,6 +244,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_divulgar_vaga
 			// 
+			this->bt_divulgar_vaga->Enabled = false;
 			this->bt_divulgar_vaga->Location = System::Drawing::Point(395, 50);
 			this->bt_divulgar_vaga->Name = L"bt_divulgar_vaga";
 			this->bt_divulgar_vaga->Size = System::Drawing::Size(102, 23);
@@ -186,6 +254,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_cadastrar_aluno
 			// 
+			this->bt_cadastrar_aluno->Enabled = false;
 			this->bt_cadastrar_aluno->Location = System::Drawing::Point(530, 49);
 			this->bt_cadastrar_aluno->Name = L"bt_cadastrar_aluno";
 			this->bt_cadastrar_aluno->Size = System::Drawing::Size(114, 23);
@@ -195,6 +264,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_cadastrar_usuarios
 			// 
+			this->bt_cadastrar_usuarios->Enabled = false;
 			this->bt_cadastrar_usuarios->Location = System::Drawing::Point(530, 78);
 			this->bt_cadastrar_usuarios->Name = L"bt_cadastrar_usuarios";
 			this->bt_cadastrar_usuarios->Size = System::Drawing::Size(114, 23);
@@ -204,6 +274,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_editar_perfis_do_usuario
 			// 
+			this->bt_editar_perfis_do_usuario->Enabled = false;
 			this->bt_editar_perfis_do_usuario->Location = System::Drawing::Point(530, 108);
 			this->bt_editar_perfis_do_usuario->Name = L"bt_editar_perfis_do_usuario";
 			this->bt_editar_perfis_do_usuario->Size = System::Drawing::Size(134, 23);
@@ -213,6 +284,7 @@ namespace WindowsClrmysql {
 			// 
 			// bt_importar_alunos_de_arquivo
 			// 
+			this->bt_importar_alunos_de_arquivo->Enabled = false;
 			this->bt_importar_alunos_de_arquivo->Location = System::Drawing::Point(530, 138);
 			this->bt_importar_alunos_de_arquivo->Name = L"bt_importar_alunos_de_arquivo";
 			this->bt_importar_alunos_de_arquivo->Size = System::Drawing::Size(178, 23);
@@ -220,7 +292,7 @@ namespace WindowsClrmysql {
 			this->bt_importar_alunos_de_arquivo->Text = L"Importar Alunos de Arquivo Excel";
 			this->bt_importar_alunos_de_arquivo->UseVisualStyleBackColor = true;
 			// 
-			// TelaDoCoordenador
+			// TelaDoUsuario
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;

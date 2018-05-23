@@ -195,13 +195,6 @@ namespace WindowsClrmysql {
 			}
 
 		}
-
-
-
-
-
-		
-		
 	}
 };
 }

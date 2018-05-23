@@ -32,7 +32,7 @@ class Perfil
 
 
     public:
-		vector<Funcionalidade*> * getFuncionalidaes();
+		vector<Funcionalidade*> * getFuncionalidades();
 		void setFuncionalidades(vector<Funcionalidade*>* funcionalidades);
 
         //@generated "UML to C++ (com.ibm.xtools.transform.uml2.cpp.CPPTransformation)"
